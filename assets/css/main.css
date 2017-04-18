@@ -1,0 +1,496 @@
+
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900');
+@import url("font-awesome.min.css");
+
+/* Reset */
+h1, h2, h3, h4, h5, h6, p, ol, ul, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/* Implementing a Grid */
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Setup Font*/
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    text-align: left;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease, z-index 0s 0.5s;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Setup Grid*/
+[class*="col"] {
+    float: left;
+}
+
+.col1 {
+    width: 8.33%;
+}
+
+.col2 {
+    width: 16.66%;
+}
+
+.col3 {
+    width: 25%;
+}
+
+.col4 {
+    width: 33.33%;
+}
+
+.col5 {
+    width: 41.66%;
+}
+
+.col6 {
+    width: 50%;
+}
+
+.col7 {
+    width: 58.33%;
+}
+
+.col8 {
+    width: 66.66%;
+}
+
+.col9 {
+    width: 75%;
+}
+
+.col10 {
+    width: 83.33%;
+}
+
+.col11 {
+    width: 91.66%;
+}
+
+.col12 {
+    width: 100%;
+}
+/* title_bar */
+
+.title_bar {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background: black;
+}
+/* header */
+
+#header {
+    margin: 0px;
+    height: 100%;
+    position: fixed;
+    display: block;
+    background-image:url('../image/dqZzcUA.jpg');
+    background-position:0% 30%;
+    text-align: center;
+}
+
+#header > header {
+    padding: 20px;
+    width: 100%;
+    display: block;
+}
+
+#header > header h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#header > header p {
+    padding: 20px 0 0 0;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+#header > nav ul li {
+    text-align: center;
+}
+
+#header > nav ul li a {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+
+}
+
+#header > nav ul li a.active {
+    background: white;
+    color: #808080;
+    opacity: 0.7;
+}
+
+.avatar img {
+    border-radius: 50%;
+    padding: 40px 0px;
+}
+
+#nav {
+    display: block;
+}
+
+/* Wrapper */
+
+#wrapper {
+    background: #FDFFFF;
+}
+
+/* Sections */
+
+section {
+    width: 100%;
+    padding: 50px 50px 50px 100px;
+    background: #fff;
+    /*border-bottom: 6px solid #BEE9E8;*/
+    height: 900px;
+    text-align: left;
+}
+
+/* Section One */
+
+.major {
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+}
+
+.major h2 {
+    font-size: 50px;
+    color: #62B6CB;
+    font-weight: 200;
+    margin: 220px 0 20px 0;
+}
+
+.major p {
+    font-size: 30px;
+    font-weight: 200;
+    color: #A7A7A9;
+}
+
+#one .container:nth-child(2) p {
+    font-size: 18px;
+    color: #A7A7A9;
+    font-weight: 100;
+}
+
+/* Footer */
+#header > footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 20px;
+
+}
+
+/* Section Two */
+
+#two div input {
+    display: none;
+}
+
+#two div:nth-child(1) header {
+    padding: 30px 0;
+}
+
+#two div:nth-child(1) header h2 {
+    font-size: 40px;
+    font-weight: 200;
+    color: #62B6CB;
+}
+
+#two div:nth-child(1) header P {
+    padding: 20px 0;
+    font-size: 18px;
+    color: #A7A7A9;
+    font-weight: 200;
+}
+
+#two div:nth-child(2) div nav li {
+    margin: 20px 0;
+}
+
+#two div:nth-child(2) div nav li label {
+    font-size: 18px;
+    color: #1B4965;
+    font-weight: 200;
+    height: 40px;
+    padding: 2px 10px;
+    border: solid;
+    border-width: 0 0 0 2px;
+    border-color: #ffffff;
+    transition: all 0.4s ease;
+}
+
+#project-1:checked ~ div nav ul li:nth-child(1) label,
+#project-2:checked ~ div nav ul li:nth-child(2) label,
+#project-3:checked ~ div nav ul li:nth-child(3) label,
+#project-4:checked ~ div nav ul li:nth-child(4) label,
+#project-5:checked ~ div nav ul li:nth-child(5) label{
+    color: #63ADF2;
+    border: solid;
+    border-width: 0 0 0 2px;
+    border-color: #63ADF2;
+    transition: all 0.4s ease;
+}
+
+/*Project Carousel*/
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+#two div:nth-child(2) div #project_carousel li > label {
+    display: none;
+}
+
+#project-1:checked ~ div #project_carousel li:nth-child(1) > label,
+#project-2:checked ~ div #project_carousel li:nth-child(2) > label,
+#project-3:checked ~ div #project_carousel li:nth-child(3) > label,
+#project-4:checked ~ div #project_carousel li:nth-child(4) > label,
+#project-5:checked ~ div #project_carousel li:nth-child(5) > label {
+    display: block;
+}
+
+.carousel label,
+.carousel label i,
+.carousel label img,
+.carousel label label{
+    display: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+
+#project-1-icon-1:checked + div > label,
+#project-1-icon-2:checked + div > label,
+#project-1-icon-3:checked + div > label,
+#project-1-icon-4:checked + div > label{
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#project-1-icon-1:checked + div label i,
+#project-1-icon-2:checked + div label i,
+#project-1-icon-3:checked + div label i,
+#project-1-icon-4:checked + div label i{
+    display: inline-block;
+    color: #A7A7A9;
+    cursor: pointer;
+}
+
+#project-1-icon-1:checked + div label label,
+#project-1-icon-2:checked + div label label,
+#project-1-icon-3:checked + div label label,
+#project-1-icon-4:checked + div label label{
+    display: inline-block;
+}
+
+#project-1-icon-1:checked + div label img,
+#project-1-icon-2:checked + div label img,
+#project-1-icon-3:checked + div label img,
+#project-1-icon-4:checked + div label img{
+    display: inline-block;
+    width: auto;
+    height: 360px;
+
+}
+
+/* Carousel Controller */
+
+.carousel_controller {
+    margin: 20px 0;
+    height: 20px;
+}
+.carousel_controller ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#project-1-icon-1~ .carousel_controller > ul > li > label {
+    display: block !important;
+    height: 7px;
+    width: 7px;
+    padding: 0;
+    border-radius: 50%;
+    margin: 0 5px;
+    background: #A7A7A9;
+    cursor: pointer;
+}
+
+#project-1-icon-1:checked ~ .carousel_controller ul li:nth-child(1) > label,
+#project-1-icon-2:checked ~ .carousel_controller ul li:nth-child(2) > label,
+#project-1-icon-3:checked ~ .carousel_controller ul li:nth-child(3) > label,
+#project-1-icon-4:checked ~ .carousel_controller ul li:nth-child(4) > label {
+    background: #63ADF2;
+}
+
+/* Carousel Project Description" */
+.project_description {
+    font-size: 15px;
+    color: #A7A7A9;
+    font-weight: 300;
+}
+
+.project_description p {
+    padding: 7px 40px;
+}
+
+.project_description p:nth-child(1) span {
+    color: #63ADF2;
+}
+
+.project_description p:nth-child(3) a {
+    text-decoration: none;
+    color: #63ADF2;
+    padding: 0 10px 0 0;
+}
+
+.project_description p:nth-child(3) a span i {
+    padding: 0 3px 0 0;
+}
+
+.project_description p:nth-child(3) a:hover {
+    text-decoration: none;
+    color: #E66795;
+}
+
+    /* Icon */
+
+.icons > li {
+    display: inline-block;
+}
+.icon {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+    padding: 0px 15px;
+}
+
+.icon:hover {
+    color: #BEE9E8;
+}
+
+.icon > span {
+    display: none;
+}
+
+
+/* Mobile Menu Toggle */
+#show-menu{
+    display: none;
+}
+
+.mobile_toggle {
+    display: none;
+    margin:10px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.mobile_toggle span {
+    display: block;
+    position: relative;
+    margin: 2px 0px;
+    height: 4px;
+    width: 30px;
+    background: grey;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+
+    .mobile_toggle {
+        display: block;
+    }
+
+    #header {
+        width: 0;
+        transition: 0.3s ease-in-out;
+    }
+    #wrapper_placeholder {
+        width: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    #wrapper {
+        width: 100%;
+    }
+
+    #header header,
+    #header nav ul li a,
+    #header footer {
+        display: none;
+        opacity: 0;
+    }
+
+    input#show-menu:checked ~ #header {
+        z-index: 2;
+        width: 300px;
+    }
+
+
+    input#show-menu:checked ~ #header header,
+    input#show-menu:checked ~ #header nav ul li a,
+    input#show-menu:checked ~ #header footer{
+        display: block;
+        opacity: 1;
+    }
+
+    input#show-menu:checked ~ #wrapper .mask {
+        z-index: 1;
+        opacity: 1;
+        transform: translate3d(250px, 0, 0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+}
+
