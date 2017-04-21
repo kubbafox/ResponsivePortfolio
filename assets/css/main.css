@@ -1019,7 +1019,7 @@ section {
     }
 
     input#show-menu:checked ~ #header {
-        z-index: 2;
+        z-index: 20;
         width: 300px;
     }
 
@@ -1031,7 +1031,7 @@ section {
     }
 
     input#show-menu:checked ~ #wrapper .mask {
-        z-index: 1;
+        z-index: 10;
         opacity: 1;
         transform: translate3d(250px, 0, 0);
         transition: opacity 0.5s ease, transform 0.5s ease;
