@@ -1173,7 +1173,27 @@ section {
     #contact_card label div {
         border: solid 1px;
         width: 400px;
-        height:600px;
+        height:500px;
+    }
+
+    #contact_card .icons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #contact_card .icons img{
+        padding-top: 30px;
+    }
+
+    #contact_card .icons li:nth-child(3){
+        margin-left: 50px;
+    }
+
+    #contact_card .icons li:nth-child(3),
+    #contact_card .icons li:nth-child(4),
+    #contact_card .icons li:nth-child(5),
+    #contact_card .icons li:nth-child(6){
+        margin-top: 30px;
     }
 
 
