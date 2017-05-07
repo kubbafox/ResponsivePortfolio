@@ -233,13 +233,18 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    margin-bottom: 20px;
     width: 100%;
     padding: 20px;
-
+    background: rgba(255,255,255,0.3);
 }
 
+
+
 /* Section Two */
+
+#two .container:nth-child(2) {
+    margin-top: 20px;
+}
 
 #two div input {
     display: none;
@@ -268,7 +273,7 @@ section {
 
 #two div:nth-child(2) div nav li label {
     font-size: 18px;
-    color: #1B4965;
+    color: #A7A7A9;
     font-weight: 300;
     height: 40px;
     padding: 2px 10px;
@@ -391,7 +396,7 @@ section {
 /* Carousel Controller */
 
 .carousel_controller {
-    margin: 20px 0;
+    margin: 30px 0;
     height: 20px;
 }
 
@@ -403,8 +408,8 @@ section {
 
 .carousel_controller > ul > li > label {
     display: block !important;
-    height: 7px;
-    width: 7px;
+    height: 9px;
+    width: 9px;
     padding: 0;
     border-radius: 50%;
     margin: 0 5px;
@@ -429,6 +434,7 @@ section {
 
 /* Carousel Project Description" */
 .project_description {
+    margin-top: 50px;
     text-align: center;
     font-size: 15px;
     color: #A7A7A9;
@@ -441,7 +447,8 @@ section {
 }
 
 .project_description p:nth-child(1) span {
-    color: #63ADF2;
+    font-weight: 400;
+    color: #F3A68B;
 }
 
 .project_description p:nth-child(3) a {
@@ -476,6 +483,7 @@ section {
     color: #A7A7A9;
     font-weight: 200;
 }
+
 
 /* Skill Bar */
 #dev_skill_chart {
@@ -557,6 +565,7 @@ section {
 
 .skill_chart_y_axis_label {
     padding-bottom: 46px;
+    padding-right: 8px;
 }
 
 .skill_level_lines {
@@ -601,7 +610,7 @@ section {
 .skill_bar_label {
     position: absolute;
     width: 80px;
-    bottom: -55px;
+    bottom: -60px;
     left: -30px;
     transform: rotate(-60deg);
     font-size: 14px;
@@ -612,7 +621,7 @@ section {
 
 #other_skill_chart .skill_bar_label{
     left: -80px;
-    bottom: -80px;
+    bottom: -90px;
     width: 140px;
 }
 
@@ -833,6 +842,10 @@ section {
 
 /*Hide the checkbox*/
 
+#contact_card {
+    perspective: 2000px;
+}
+
 #contact_card label {
     position: relative;
 }
@@ -845,15 +858,19 @@ section {
     border: solid 1px;
     width: 640px;
     height:375px;
+    transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 #contact_card label div .front{
     position: absolute;
+    backface-visibility: hidden;
     background-image:url("http://i.imgur.com/8OAhDQs.png");
 }
 
 #contact_card label div .back{
     position: absolute;
+    backface-visibility: hidden;
     background-image:url("http://i.imgur.com/7nECo5U.png");
     background-size: cover;
 
@@ -995,7 +1012,7 @@ section {
 }
 
 .icon {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     border-bottom: none;
     position: relative;
@@ -1003,7 +1020,7 @@ section {
 }
 
 .icon:hover {
-    color: #BEE9E8;
+    color: #5CC7F0;
 }
 
 .icon > span {
